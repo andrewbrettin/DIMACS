@@ -1,4 +1,0 @@
-1. Import statements (1-5)
-2. Parameter values
-3. Algorithm
-4. Output

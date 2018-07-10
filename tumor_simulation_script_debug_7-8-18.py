@@ -2,7 +2,7 @@ import math
 import random
 import numpy as np
 from numpy import random as rand
-rand.seed(0)
+rand.seed(2)
 
 dim = 3  # Number of dimensions
 dx = 1  # Grid spacing

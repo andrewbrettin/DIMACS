@@ -181,5 +181,3 @@ class Grid:
             print(gridpoint, ':')
             for cell in self.dictionary[gridpoint]:
                 print(cell.to_string())
-
-# Comment

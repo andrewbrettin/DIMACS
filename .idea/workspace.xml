@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007c18b5-c7ef-4a59-97fe-1aa9c7e1f274" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/tumor_simulation_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,20 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2865">
-              <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+            <state relative-caret-position="535">
+              <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="254" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tumor_simulation_script_debug_7-7-18.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tumor_simulation_script_debug_7-7-18.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
+            <state relative-caret-position="665">
+              <caret line="182" column="39" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="39" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -40,8 +45,8 @@
       <file leaf-file-name="tumor_simulation_script_debug_7-8-18.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state>
+              <caret selection-end-line="254" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -74,10 +79,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/outline.txt" />
-        <option value="$PROJECT_DIR$/tumor_simulation_script.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
-        <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation_script.py" />
       </list>
     </option>
   </component>
@@ -196,12 +201,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.15450644" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.15450644" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.31030303" />
       <window_info anchor="right" id="R Packages" order="3" weight="0.3297568" />
       <window_info anchor="right" id="R Graphics" order="4" weight="0.3297568" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50069445" side_tool="true" weight="0.17090909" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.19700748" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.19700748" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" x="151" y="442" width="1398" height="264" id="Python Console" order="7" sideWeight="0.5007153" side_tool="true" weight="0.26558605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -225,6 +230,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2865">
           <caret line="194" selection-start-line="194" selection-end-line="194" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -365,27 +373,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2865">
-          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="665">
+          <caret line="182" column="39" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="39" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="254" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="254" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

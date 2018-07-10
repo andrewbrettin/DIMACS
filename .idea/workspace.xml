@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007c18b5-c7ef-4a59-97fe-1aa9c7e1f274" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/outline.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/output/Output-graphic-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/Output-graphic-9.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tumor_simulation_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,10 +45,10 @@
       <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="199" column="38" selection-start-line="199" selection-start-column="38" selection-end-line="199" selection-end-column="38" />
+            <state relative-caret-position="399">
+              <caret line="277" column="58" lean-forward="true" selection-start-line="277" selection-start-column="58" selection-end-line="277" selection-end-column="58" />
               <folding>
-                <element signature="e#3#16#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,6 +71,9 @@
       <find>iteration</find>
       <find>simulation</find>
     </findStrings>
+    <replaceStrings>
+      <replace>20</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,7 +234,7 @@
         <state relative-caret-position="2865">
           <caret line="194" selection-start-line="194" selection-end-line="194" />
           <folding>
-            <element signature="e#3#16#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -380,10 +398,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="199" column="38" selection-start-line="199" selection-start-column="38" selection-end-line="199" selection-end-column="38" />
+        <state relative-caret-position="399">
+          <caret line="277" column="58" lean-forward="true" selection-start-line="277" selection-start-column="58" selection-end-line="277" selection-end-column="58" />
           <folding>
-            <element signature="e#3#16#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

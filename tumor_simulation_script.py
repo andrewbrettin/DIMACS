@@ -1,3 +1,4 @@
+import os
 import random
 import numpy as np
 from numpy import random as rand
@@ -5,14 +6,16 @@ rand.seed(2) # Seed is chosen so that tumor doesn't go extinct
 import matplotlib.pyplot as plt
 import imageio
 
+save_dir = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
+
 dim = 3  # Number of dimensions
 dx = 1  # Grid spacing
-D = 1  # Diffusion constant
+D = .05  # Diffusion constant
 tau_D = 1/(2*dim) * dx**2/D  # Diffusion time constant
 
-rate_b = 2  # Birth rate of cell A
+rate_b = .1  # Birth rate of cell A
 # TO DO: for multiple cell types, rate_b will be a dictionary indicating birth rates of each cell
-rate_d = 1  # Death rate
+rate_d = 0.05  # Death rate
 carrying_capacity = 20  # Number of sustainable cells at each gridpoint
 
 k1 = (1 - 0.33)/np.log(2)
@@ -23,7 +26,7 @@ k2_p = 3
 cell_types_list = ('A',)
 cell_colors = {'A':'b'}
 
-t_final = 10.
+t_final = 180.
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -196,9 +199,9 @@ class Grid:
         # Tested Mon 7/2 6:30pm
         return min([self.T_R(gridpoint) for gridpoint in self.dictionary])
 
-    def plot(self, filename, file_type='.jpg',
-             output_dir='/Users/Andrew/PycharmProjects/Tumor_Simulation/output/',
-             x_min=-15, x_max=15, y_min=-15, y_max=15):
+    def plot(self, filename, file_type='.png',
+             output_dir=save_dir,
+             x_min=-30, x_max=30, y_min=-30, y_max=30):
         fig = plt.figure()
         ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
         ax.set_xlim(x_min, x_max)
@@ -208,6 +211,7 @@ class Grid:
                 if (x_min <= cell.coords[0] <= x_max and y_min <= cell.coords[1] <= y_max):
                     ax.plot(cell.coords[0], cell.coords[1],
                             marker='o', markerfacecolor='b', markeredgecolor='k')
+        ax.set_aspect('equal')
         fig.savefig(output_dir + filename + file_type)
 
     def print(self):
@@ -218,13 +222,14 @@ class Grid:
             for cell in self.dictionary[gridpoint]:
                 print(cell.to_string())
 
-
 # Operator-splitting algorithm implementation.
 # Initialize grid:
 grid = Grid()
 grid.add_cell()
 t = 0
 iteration = 0
+images = []
+
 while t < t_final:
     iteration += 1
     print('Time: ', t)
@@ -269,6 +274,11 @@ while t < t_final:
     grid.update_gridpoints()
     # (e) Synchronize t across all cells
     t = t_old + dt
-    # (f) Save gird as jpeg
-    grid.plot('Output-graphic-' + str(iteration))
+    # (f) Save grid as jpeg
+    filename = 'output-graphic-' + str(iteration).zfill(3)
+    grid.plot(filename)
+    filepath = os.path.join(save_dir, filename + '.png')
+    images.append(imageio.imread(filepath))
+
+imageio.mimsave('/Users/Andrew/PycharmProjects/Tumor_Simulation/output/animation.gif', images, duration = 0.2)
 

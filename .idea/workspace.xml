@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007c18b5-c7ef-4a59-97fe-1aa9c7e1f274" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output-graphic-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tumor_simulation_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="662">
-              <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+              <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -81,10 +74,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/outline.txt" />
-        <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
       </list>
     </option>
   </component>
@@ -392,7 +385,7 @@
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="662">
-          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+          <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

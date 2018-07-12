@@ -2,31 +2,33 @@ import os
 import random
 import numpy as np
 from numpy import random as rand
-rand.seed(2) # Seed is chosen so that tumor doesn't go extinct
+
+rand.seed(2)  # Seed is chosen so that tumor doesn't go extinct
 import matplotlib.pyplot as plt
 import imageio
 
-save_dir = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
+SAVE_DIR = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
 
-dim = 3  # Number of dimensions
-dx = 1  # Grid spacing
+DIM = 3  # Number of DIMensions
+DX = 1  # Grid spacing
 D = .05  # Diffusion constant
-tau_D = 1/(2*dim) * dx**2/D  # Diffusion time constant
+tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-rate_b = .1  # Birth rate of cell A
-# TO DO: for multiple cell types, rate_b will be a dictionary indicating birth rates of each cell
-rate_d = 0.05  # Death rate
-carrying_capacity = 20  # Number of sustainable cells at each gridpoint
+RATE_B = {'A': .1, 'B': .1}  # Birth rate of cell A
+# TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
+RATE_D = 0.05  # Death rate
+CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
 
-k1 = (1 - 0.33)/np.log(2)
-k1_p = (1 + 0.33)/np.log(2)
+k1 = (1 - 0.33) / np.log(2)
+k1_p = (1 + 0.33) / np.log(2)
 k2 = 2
 k2_p = 3
 
-cell_types_list = ('A',)
-cell_colors = {'A':'b'}
+CELL_TYPES_LIST = ('A', 'B')
+CELL_COLORS = {'A': 'b', 'B': 'g'}
 
-t_final = 180.
+t_final = 150.
+MUT_TIME = 0.3 * t_final
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -41,14 +43,14 @@ class Cell:
         - to_string()
     """
 
-    def __init__(self, coords=np.zeros(dim, dtype=np.float_), cell_type='A'):
+    def __init__(self, coords=np.zeros(DIM, dtype=np.float_), cell_type='A'):
         # Coords can be a tuple or an numpy array
         # Tested Th 6/28 8:45pm
-        if len(coords) == dim:
+        if len(coords) == DIM:
             self.coords = np.array(coords, dtype=np.float_)
         else:
             raise ValueError
-        if cell_type in cell_types_list:
+        if cell_type in CELL_TYPES_LIST:
             self.cell_type = cell_type
         else:
             raise ValueError('Cell type is invalid')
@@ -91,17 +93,20 @@ class Grid:
         - cell_type_count(gridpoint, cell_type)
         - add_cell(coords, cell_type)
         - remove_cell(coords, cell_type)
+        - update_gridpoints()
         - copy()
+        - choose_random_cell(gridpoint, cell_type)
         - birth_propensity(gridpoint, cell_type)
         - death_propensity(gridpoint, cell_type)
-        - net_propensity(gridpoint, cell_type)
+        - propensities(gridpoint)
+        - net_propensity(gridpoint)
         - T_R(gridpoint)
         - T_R_min()
         - plot()
         - print()
     """
 
-    def __init__(self, scale=1/dx):
+    def __init__(self, scale=1 / DX):
         # Grid is a dictionary with tuples representing discrete lattice points
         #    and values representing sets of cells nearest to that point
         # Scale is the number of gridpoints per unit
@@ -123,10 +128,10 @@ class Grid:
         count = 0
         for cell in self.dictionary[gridpoint]:
             if cell.cell_type == cell_type:
-                count = count + 1
+                count += 1
         return count
 
-    def add_cell(self, coords=np.zeros(dim), cell_type='A'):
+    def add_cell(self, coords=np.zeros(DIM), cell_type='A'):
         # Adds cell as a value to key corresponding to discrete gridpoint
         #    If no gridpoint is in dictionary, create a list containing that cell
         #    Otherwise, add it to the existing value list.
@@ -169,22 +174,44 @@ class Grid:
                 new_grid.add_cell(cell.coords, cell.cell_type)
         return new_grid
 
+    def choose_random_cell(self, gridpoint, cell_type=None):
+        # Returns coordinates of a random cell at a gridpoint with the specified cell type.
+        # If no cell type is specified, then it selects an arbitrary random cell from the gridpoint.
+        if cell_type == None:
+            random_cell = rand.choice(tuple(self.dictionary[gridpoint]))
+            return random_cell.coords
+        else:
+            cell_subset = []
+            for cell in self.dictionary[gridpoint]:
+                if cell.cell_type == cell_type:
+                    cell_subset.append(cell)
+            random_cell = rand.choice(cell_subset)
+            return random_cell.coords
+
     # Propensity functions:
     def birth_propensity(self, gridpoint, cell_type):
         # Edited Fri 7/6 6:51pm
-        return self.cell_type_count(gridpoint, cell_type) * rate_b * (1 - self.cell_count(gridpoint) / carrying_capacity)
+        return self.cell_type_count(gridpoint, cell_type) * RATE_B[cell_type] * (
+                    1 - self.cell_count(gridpoint) / CARRYING_CAPACITY)
 
     def death_propensity(self, gridpoint, cell_type):
         # Edited Fri 7/6 6:53pm
-        return self.cell_type_count(gridpoint, cell_type) * rate_d
+        return self.cell_type_count(gridpoint, cell_type) * RATE_D
+
+    def propensities(self, gridpoint):
+        # Produces a list of propensities evaluated at the gridpoint: [birth(A), death(A), birth(B), death(B), ...]
+        #    propensities_list[2*i] is the birth propensity of cell type i
+        #    propensities_list[2*i + 1] is the death propensity of cell type i
+        propensities_list = []
+        for cell_type in CELL_TYPES_LIST:
+            propensities_list.append(self.birth_propensity(gridpoint, cell_type))
+            propensities_list.append(self.death_propensity(gridpoint, cell_type))
+        return propensities_list
 
     def net_propensity(self, gridpoint):
         # return sum(f(cell_count) for f in [birth_propensity, death_propensity])
-        # Edited Sat 7/7 3:18pm
-        total = 0
-        for cell_type in cell_types_list:
-            total += self.birth_propensity(gridpoint, cell_type) + self.death_propensity(gridpoint, cell_type)
-        return total
+        # Edited Wed 7/11 3:08pm
+        return sum(self.propensities(gridpoint))
 
     # Macroscopic time constant
     def T_R(self, gridpoint):
@@ -200,7 +227,7 @@ class Grid:
         return min([self.T_R(gridpoint) for gridpoint in self.dictionary])
 
     def plot(self, filename, file_type='.png',
-             output_dir=save_dir,
+             output_dir=SAVE_DIR,
              x_min=-30, x_max=30, y_min=-30, y_max=30):
         fig = plt.figure()
         ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
@@ -208,9 +235,9 @@ class Grid:
         ax.set_ylim(y_min, y_max)
         for gridpoint in self.dictionary:
             for cell in self.dictionary[gridpoint]:
-                if (x_min <= cell.coords[0] <= x_max and y_min <= cell.coords[1] <= y_max):
+                if x_min <= cell.coords[0] <= x_max and y_min <= cell.coords[1] <= y_max:
                     ax.plot(cell.coords[0], cell.coords[1],
-                            marker='o', markerfacecolor='b', markeredgecolor='k')
+                            marker='o', markerfacecolor=CELL_COLORS[cell.cell_type], markeredgecolor='k')
         ax.set_aspect('equal')
         fig.savefig(output_dir + filename + file_type)
 
@@ -222,6 +249,7 @@ class Grid:
             for cell in self.dictionary[gridpoint]:
                 print(cell.to_string())
 
+
 # Operator-splitting algorithm implementation.
 # Initialize grid:
 grid = Grid()
@@ -229,6 +257,7 @@ grid.add_cell()
 t = 0
 iteration = 0
 images = []
+#added_subclone = False
 
 while t < t_final:
     iteration += 1
@@ -258,27 +287,39 @@ while t < t_final:
         while t < t_old + dt:
             r1 = rand.sample()
             r2 = rand.sample()
-            tau_R = grid.T_R(gridpoint) * np.log(1./r1)
+            tau_R = grid.T_R(gridpoint) * np.log(1. / r1)
             if tau_R <= dt:  # Reaction occurs
-                random_cell = random.choice(grid.dictionary[gridpoint])  # Select random cell to "react"
-                if r2 < grid.birth_propensity(gridpoint, 'A') / grid.net_propensity(gridpoint):
-                    # Birth occurs at the exact location of a randomly selected existing cell
-                    grid.add_cell(random_cell.coords, random_cell.cell_type)
-                else:
-                    # One randomly chosen cell at the gridpoint dies
-                    grid.remove_cell(random_cell.coords, random_cell.cell_type)
+                propensities_list = grid.propensities(gridpoint)
+                for i in range(2 * len(CELL_TYPES_LIST)):
+                    if r2 < sum(propensities_list[:i + 1]) / grid.net_propensity(gridpoint):
+                        # Corresponding reaction occurs
+                        if i % 2 == 0:
+                            # birth occurs
+                            reacting_cell_type = CELL_TYPES_LIST[int(i / 2)]
+                            random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
+                            grid.add_cell(random_coords, reacting_cell_type)
+                        else:
+                            # death occurs
+                            reacting_cell_type = CELL_TYPES_LIST[int((i - 1) / 2)]
+                            random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
+                            grid.remove_cell(random_coords, reacting_cell_type)
+                        break
                 t = t + tau_R
             else:
                 t = t_old + dt
         t = t_old
     grid.update_gridpoints()
+    #    (iii) Introduce new subclone when the simulation is at least 30% finished
+    # if not added_subclone and t > .3 * MUT_TIME:
+    #     grid.add_cell(np.sqrt(2 * D * t) * rand.normal(0, 1, len(DIM)), 'B')
+    #     added_subclone = True
     # (e) Synchronize t across all cells
     t = t_old + dt
     # (f) Save grid as jpeg
     filename = 'output-graphic-' + str(iteration).zfill(3)
     grid.plot(filename)
-    filepath = os.path.join(save_dir, filename + '.png')
+    filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 
-imageio.mimsave('/Users/Andrew/PycharmProjects/Tumor_Simulation/output/animation.gif', images, duration = 0.2)
-
+imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=0.2)
+print('Animation successfully assembled')

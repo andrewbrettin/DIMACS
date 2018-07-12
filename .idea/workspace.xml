@@ -2,32 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007c18b5-c7ef-4a59-97fe-1aa9c7e1f274" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/Output-graphic-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/animation.gif" beforeDir="false" afterPath="$PROJECT_DIR$/output/animation.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-032.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-035.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-038.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-040.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-043.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tumor_simulation_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +64,8 @@
       <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="277" column="58" lean-forward="true" selection-start-line="277" selection-start-column="58" selection-end-line="277" selection-end-column="58" />
+            <state relative-caret-position="285">
+              <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -67,12 +86,21 @@
     <findStrings>
       <find>cell_types_list</find>
       <find>equals</find>
-      <find>rate_b</find>
       <find>iteration</find>
       <find>simulation</find>
+      <find>rate_b</find>
+      <find>dim</find>
+      <find>dx</find>
+      <find>rate_d</find>
+      <find>cell_colors</find>
+      <find>t_final</find>
+      <find>random.choice</find>
     </findStrings>
     <replaceStrings>
       <replace>20</replace>
+      <replace>DIM</replace>
+      <replace>CARRYING_CAPACITY</replace>
+      <replace>t_FINAL</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -90,8 +118,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="52" />
+    <option name="y" value="22" />
+    <option name="width" value="1388" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -204,14 +234,14 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.15450644" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.31030303" />
       <window_info anchor="right" id="R Packages" order="3" weight="0.3297568" />
       <window_info anchor="right" id="R Graphics" order="4" weight="0.3297568" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50069445" side_tool="true" weight="0.17090909" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.19700748" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.19700748" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" x="151" y="442" width="1398" height="264" id="Python Console" order="7" sideWeight="0.5007153" side_tool="true" weight="0.26558605" />
+      <window_info anchor="bottom" x="151" y="442" width="1398" height="264" id="Python Console" order="7" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.19700748" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.26558605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -231,6 +261,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2865">
           <caret line="194" selection-start-line="194" selection-end-line="194" />
           <folding>
@@ -239,26 +279,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2865">
@@ -266,33 +288,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="169" column="67" selection-start-line="169" selection-start-column="67" selection-end-line="169" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3750">
-          <caret line="253" column="55" lean-forward="true" selection-start-line="253" selection-start-column="55" selection-end-line="253" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2865">
@@ -300,33 +298,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2565">
-          <caret line="174" column="66" lean-forward="true" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="169" column="67" selection-start-line="169" selection-start-column="67" selection-end-line="169" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2895">
@@ -341,13 +315,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outline.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/outline.txt" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -355,51 +323,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/outline.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outline.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="177" column="23" selection-start-line="177" selection-start-column="23" selection-end-line="177" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="254" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="182" column="39" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/outline.txt" />
+    <entry file="file://$PROJECT_DIR$/outline.txt" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="277" column="58" lean-forward="true" selection-start-line="277" selection-start-column="58" selection-end-line="277" selection-end-column="58" />
+        <state relative-caret-position="285">
+          <caret line="305" column="29" selection-start-line="305" selection-start-column="29" selection-end-line="305" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

@@ -12,9 +12,9 @@ DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': 0.1, 'B': 0.2}
+RATE_B = {'A': 0.1, 'B': 0.3}
 # TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
-RATE_D = 0.05  # Death rate
+RATE_D = 0.03  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
 
 k1 = (1 - 0.33) / np.log(2)
@@ -26,7 +26,7 @@ CELL_TYPES_LIST = ('A', 'B')
 CELL_COLORS = {'A': 'm', 'B': 'g'}
 
 t_final = 150.
-MUT_TIME = 0.5 * t_final
+MUT_TIME = 0.1 * t_final
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -325,5 +325,5 @@ while t < t_final:
     filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 
-imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=0.2)
+imageio.mimsave(SAVE_DIR + 'animationLLL.gif', images, duration=0.2)
 print('Animation successfully assembled')

@@ -1,20 +1,18 @@
 import os
-import random
 import numpy as np
 from numpy import random as rand
-
-rand.seed(2)  # Seed is chosen so that tumor doesn't go extinct
+rand.seed(0)  # Seed is chosen so that tumor doesn't go extinct
 import matplotlib.pyplot as plt
 import imageio
 
 SAVE_DIR = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
 
-DIM = 3  # Number of DIMensions
-DX = 1  # Grid spacing
+DIM = 2  # Number of DIMensions
+DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': .1, 'B': .1}  # Birth rate of cell A
+RATE_B = {'A': .1, 'B': .2}
 # TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
 RATE_D = 0.05  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
@@ -25,10 +23,10 @@ k2 = 2
 k2_p = 3
 
 CELL_TYPES_LIST = ('A', 'B')
-CELL_COLORS = {'A': 'b', 'B': 'g'}
+CELL_COLORS = {'A': 'm', 'B': 'g'}
 
 t_final = 150.
-MUT_TIME = 0.3 * t_final
+MUT_TIME = 0.5 * t_final
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -237,7 +235,8 @@ class Grid:
             for cell in self.dictionary[gridpoint]:
                 if x_min <= cell.coords[0] <= x_max and y_min <= cell.coords[1] <= y_max:
                     ax.plot(cell.coords[0], cell.coords[1],
-                            marker='o', markerfacecolor=CELL_COLORS[cell.cell_type], markeredgecolor='k')
+                            marker='.', markerfacecolor=CELL_COLORS[cell.cell_type],
+                            markersize=8, markeredgewidth=0.3, markeredgecolor='k')
         ax.set_aspect('equal')
         fig.savefig(output_dir + filename + file_type)
 
@@ -257,7 +256,7 @@ grid.add_cell()
 t = 0
 iteration = 0
 images = []
-#added_subclone = False
+added_subclone = False
 
 while t < t_final:
     iteration += 1
@@ -297,7 +296,11 @@ while t < t_final:
                             # birth occurs
                             reacting_cell_type = CELL_TYPES_LIST[int(i / 2)]
                             random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
-                            grid.add_cell(random_coords, reacting_cell_type)
+                            if not added_subclone and t > MUT_TIME:
+                                grid.add_cell(random_coords, 'B')
+                                added_subclone = True
+                            else:
+                                grid.add_cell(random_coords, reacting_cell_type)
                         else:
                             # death occurs
                             reacting_cell_type = CELL_TYPES_LIST[int((i - 1) / 2)]
@@ -310,9 +313,6 @@ while t < t_final:
         t = t_old
     grid.update_gridpoints()
     #    (iii) Introduce new subclone when the simulation is at least 30% finished
-    # if not added_subclone and t > .3 * MUT_TIME:
-    #     grid.add_cell(np.sqrt(2 * D * t) * rand.normal(0, 1, len(DIM)), 'B')
-    #     added_subclone = True
     # (e) Synchronize t across all cells
     t = t_old + dt
     # (f) Save grid as jpeg

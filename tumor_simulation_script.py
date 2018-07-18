@@ -1,18 +1,18 @@
 import os
 import numpy as np
 from numpy import random as rand
-rand.seed(0)  # Seed is chosen so that tumor doesn't go extinct
+rand.seed(2)  # Seed is chosen so that tumor doesn't go extinct
 import matplotlib.pyplot as plt
 import imageio
 
 SAVE_DIR = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
 
-DIM = 2  # Number of DIMensions
+DIM = 3  # Number of DIMensions
 DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': 0.1, 'B': 0.2}
+RATE_B = {'A': 0.1, 'B': 0.15, 'C': 0.2}
 # TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
 RATE_D = 0.05  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
@@ -22,11 +22,15 @@ k1_p = (1 + 0.33) / np.log(2)
 k2 = 2
 k2_p = 3
 
-CELL_TYPES_LIST = ('A', 'B')
-CELL_COLORS = {'A': 'm', 'B': 'g'}
+CELL_TYPES_LIST = ('A', 'B', 'C')
+CELL_COLORS = {'A': 'm', 'B': 'g', 'C': 'y'}
+# CELL_COLORS = {}
+# for cell_type in CELL_TYPES_LIST:
+#     CELL_COLORS[cell_type] = tuple(rand.randint(0,10,3) / 10)
+##     Division by 10 to normalize to zero
 
-t_final = 150.
-MUT_TIME = 0.5 * t_final
+t_final = 120.
+MUT_TIME = 0.3 * t_final
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -266,7 +270,12 @@ while t < t_final:
     iteration += 1
     print('Time: ', t, 'A:', grid.total_cell_count('A'), 'B:', grid.total_cell_count('B'))
     # (a) Determine system state type:
-    F = float(grid.T_R_min() / tau_D)
+    try:
+        F = float(grid.T_R_min() / tau_D)
+    except ValueError:
+        print('ERROR: All cells have died under this initial seed.')
+        print('Simulation discontinued')
+        break
     # (b) Compute time-step:
     if F < k1:
         dt = k2 * tau_D
@@ -325,5 +334,5 @@ while t < t_final:
     filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 
-imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=0.2)
+imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=5./len(images))
 print('Animation successfully assembled')

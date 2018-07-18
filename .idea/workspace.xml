@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007c18b5-c7ef-4a59-97fe-1aa9c7e1f274" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tumor_simulation-HLL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tumor_simulation-LLL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tumor_simulation-HLM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tumor_simulation-LHM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tumor_simulation-LLM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/animation.gif" beforeDir="false" afterPath="$PROJECT_DIR$/output/animation.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/animationLLL.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output/output-graphic-001.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-001.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/output-graphic-002.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-002.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/output-graphic-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-003.png" afterDir="false" />
@@ -19,207 +22,9 @@
       <change beforePath="$PROJECT_DIR$/output/output-graphic-012.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-012.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/output-graphic-013.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-013.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/output-graphic-014.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-014.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-015.png" beforeDir="false" afterPath="$PROJECT_DIR$/output/output-graphic-015.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-041.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-051.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-052.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-054.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-055.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-056.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-057.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-058.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-061.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-062.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-064.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-065.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-069.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-075.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-085.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-087.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-104.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-107.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-109.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-111.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-112.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-116.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-117.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-118.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-119.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-121.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-124.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-125.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-126.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-127.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-129.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-132.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-133.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-134.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-137.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-138.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-139.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-141.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-142.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-143.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-146.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-147.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-148.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-149.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-151.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-153.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-154.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-155.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-157.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-158.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-159.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-161.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-162.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-163.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-164.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-165.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-166.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-167.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-168.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-169.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-170.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-171.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-172.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-173.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-174.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-175.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-176.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-177.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-178.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-179.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-181.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-182.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-183.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-184.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-185.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-186.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-187.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-188.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-189.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-190.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-191.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-193.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-194.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-195.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-196.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-197.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-198.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-199.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-200.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-201.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-202.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-203.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-204.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-205.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-206.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-207.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-209.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-210.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-211.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-212.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-213.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output-graphic-215.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output-graphic-015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumor_simulation-HLL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumor_simulation-LLL.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation-LLL.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tumor_simulation_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tumor_simulation_script.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -234,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tumor_simulation_script.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="264" selection-start-line="264" selection-end-line="325" selection-end-column="43" />
+            <state relative-caret-position="5040">
+              <caret line="336" column="75" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -246,21 +51,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tumor_simulation-LLL.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tumor_simulation-LLL.py">
+      <file leaf-file-name="tumor_simulation-LLM.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tumor_simulation-LLM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="399">
+              <caret line="327" column="55" lean-forward="true" selection-start-line="327" selection-start-column="55" selection-end-line="327" selection-end-column="78" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tumor_simulation-HLL.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tumor_simulation-HLL.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -286,8 +86,9 @@
       <find>t_final</find>
       <find>random.choice</find>
       <find>i</find>
-      <find>cell</find>
       <find>cell_count</find>
+      <find>cell</find>
+      <find>png</find>
     </findStrings>
     <replaceStrings>
       <replace>20</replace>
@@ -306,18 +107,28 @@
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
         <option value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
-        <option value="$PROJECT_DIR$/tumor_simulation_script.py" />
         <option value="$PROJECT_DIR$/tumor_simulation-low-birth-diffusion-mutationtime.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-LHH.py" />
+        <option value="$PROJECT_DIR$/tumor_siulation-LHH.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation_HHH.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-HHL.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-HHH.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-HLH.py" />
         <option value="$PROJECT_DIR$/tumor_simulation-HLL.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-LLH.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-LHL.py" />
         <option value="$PROJECT_DIR$/tumor_simulation-LLL.py" />
+        <option value="$PROJECT_DIR$/make_gif.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-HLM.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-LLM.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation-LHM.py" />
+        <option value="$PROJECT_DIR$/tumor_simulation_script.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="52" />
-    <option name="y" value="22" />
-    <option name="width" value="1388" />
-    <option name="height" value="878" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -325,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,6 +147,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,8 +167,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tumor_simulation-low-birth-diffusion-mutationtime">
-    <configuration name="tumor_simulation-low-birth-diffusion-mutationtime" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.tumor_simulation_script">
+    <configuration name="tumor_simulation-HLM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tumor_Simulation1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tumor_simulation-HLM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tumor_simulation-LHM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tumor_Simulation1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tumor_simulation-LHM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tumor_simulation-LLL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tumor_Simulation1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -370,6 +217,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tumor_simulation-LLL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="tumor_simulation-LLM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tumor_Simulation1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tumor_simulation-LLM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -393,34 +258,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="tumor_simulation_script_debug_7-8-18" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tumor_Simulation1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
+      <item itemvalue="Python.tumor_simulation-LLM" />
+      <item itemvalue="Python.tumor_simulation-LLL" />
+      <item itemvalue="Python.tumor_simulation-LHM" />
       <item itemvalue="Python.tumor_simulation_script" />
-      <item itemvalue="Python.tumor_simulation_script_debug_7-8-18" />
-      <item itemvalue="Python.tumor_simulation-low-birth-diffusion-mutationtime" />
+      <item itemvalue="Python.tumor_simulation-HLM" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tumor_simulation-low-birth-diffusion-mutationtime" />
         <item itemvalue="Python.tumor_simulation_script" />
-        <item itemvalue="Python.tumor_simulation_script_debug_7-8-18" />
+        <item itemvalue="Python.tumor_simulation-LHM" />
+        <item itemvalue="Python.tumor_simulation-LLM" />
+        <item itemvalue="Python.tumor_simulation-HLM" />
+        <item itemvalue="Python.tumor_simulation-LLL" />
       </list>
     </recent_temporary>
   </component>
@@ -447,17 +298,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.27110156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49814126" visible="true" weight="0.19241774" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.31030303" />
       <window_info anchor="right" id="R Packages" order="3" weight="0.3297568" />
       <window_info anchor="right" id="R Graphics" order="4" weight="0.3297568" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50069445" side_tool="true" weight="0.17090909" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49713877" visible="true" weight="0.31047383" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5035765" side_tool="true" weight="0.31047383" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49642345" visible="true" weight="0.29301745" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" x="151" y="442" width="1398" height="264" id="Python Console" order="7" sideWeight="0.5028612" side_tool="true" visible="true" weight="0.31047383" />
+      <window_info anchor="bottom" x="151" y="442" width="1398" height="264" id="Python Console" order="7" sideWeight="0.5035765" side_tool="true" weight="0.31047383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.26558605" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.3990025" />
@@ -475,6 +326,104 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="27" selection-end-line="329" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4875">
+          <caret line="327" column="40" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LHM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4155">
+          <caret line="279" column="28" lean-forward="true" selection-start-line="279" selection-start-column="28" selection-end-line="279" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="27" selection-end-line="329" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4875">
+          <caret line="327" column="40" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LHM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -544,23 +493,52 @@
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18_2.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-8-18.py" />
     <entry file="file://$PROJECT_DIR$/tumor_simulation_script_debug_7-7-18.py" />
-    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLL.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LHL.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HHL.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLH.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HHH.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_siulation-LHH.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLH.py" />
+    <entry file="file://$PROJECT_DIR$/make_gif.py" />
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="264" selection-start-line="264" selection-end-line="325" selection-end-column="43" />
+        <state relative-caret-position="4875">
+          <caret line="327" column="40" selection-start-line="327" selection-start-column="40" selection-end-line="327" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation-HLL.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLL.py">
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LHM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="4185">
+          <caret line="279" column="28" selection-start-line="279" selection-start-column="28" selection-end-line="279" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation-LLM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="327" column="55" lean-forward="true" selection-start-line="327" selection-start-column="55" selection-end-line="327" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tumor_simulation_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5040">
+          <caret line="336" column="75" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

@@ -1,20 +1,20 @@
 import os
 import numpy as np
 from numpy import random as rand
-rand.seed(0)  # Seed is chosen so that tumor doesn't go extinct
+rand.seed(2)  # Seed is chosen so that tumor doesn't go extinct
 import matplotlib.pyplot as plt
 import imageio
 
-SAVE_DIR = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/'
+SAVE_DIR = '/Users/Andrew/PycharmProjects/Tumor_Simulation/output/LLM/'
 
 DIM = 2  # Number of DIMensions
 DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': 0.1, 'B': 0.3}
+RATE_B = {'A': 0.2, 'B': 0.2}
 # TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
-RATE_D = 0.03  # Death rate
+RATE_D = 0.05  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
 
 k1 = (1 - 0.33) / np.log(2)
@@ -25,8 +25,8 @@ k2_p = 3
 CELL_TYPES_LIST = ('A', 'B')
 CELL_COLORS = {'A': 'm', 'B': 'g'}
 
-t_final = 150.
-MUT_TIME = 0.1 * t_final
+t_final = 120.
+MUT_TIME = 0.3 * t_final
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -228,7 +228,7 @@ class Grid:
         # Tested Mon 7/2 6:30pm
         return min([self.T_R(gridpoint) for gridpoint in self.dictionary])
 
-    def plot(self, filename, file_type='.png',
+    def plot(self, filename, file_type='.jpg',
              output_dir=SAVE_DIR,
              x_min=-30, x_max=30, y_min=-30, y_max=30):
         fig = plt.figure()
@@ -322,8 +322,8 @@ while t < t_final:
     # (f) Save grid as jpeg
     filename = 'output-graphic-' + str(iteration).zfill(3)
     grid.plot(filename)
-    filepath = os.path.join(SAVE_DIR, filename + '.png')
+    filepath = os.path.join(SAVE_DIR, filename + '.jpg')
     images.append(imageio.imread(filepath))
 
-imageio.mimsave(SAVE_DIR + 'animationLLL.gif', images, duration=0.2)
+imageio.mimsave(SAVE_DIR + 'animationLLM.gif', images, duration=5./len(images))
 print('Animation successfully assembled')

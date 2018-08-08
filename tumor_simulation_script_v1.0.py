@@ -12,7 +12,7 @@ DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': 0.1, 'B': 0.15, 'C': 0.2}
+RATE_B = {'A': 0.1, 'B': 0.1, 'C': 0.2}
 # TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
 RATE_D = 0.05  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
@@ -24,10 +24,6 @@ k2_p = 3
 
 CELL_TYPES_LIST = ('A', 'B', 'C')
 CELL_COLORS = {'A': 'm', 'B': 'g', 'C': 'y'}
-# CELL_COLORS = {}
-# for cell_type in CELL_TYPES_LIST:
-#     CELL_COLORS[cell_type] = tuple(rand.randint(0,10,3) / 10)
-##     Division by 10 to normalize to zero
 
 t_final = 120.
 MUT_TIME = 0.3 * t_final
@@ -90,9 +86,11 @@ class Grid:
         Instance variables:
         - dictionary
         - scale
+        - total_clone_count
+        -
         Methods:
         - cell_count(gridpoint)
-        - cell_type_count(gridpoint, cell_type)
+        - total_cell_count()
         - add_cell(coords, cell_type)
         - remove_cell(coords, cell_type)
         - update_gridpoints()
@@ -334,5 +332,5 @@ while t < t_final:
     filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 
-imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=5./len(images))
+imageio.mimsave(SAVE_DIR + 'animation.gif', images, duration=5./len(images))  # Creates a 5 second gif
 print('Animation successfully assembled')

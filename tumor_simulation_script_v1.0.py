@@ -86,8 +86,6 @@ class Grid:
         Instance variables:
         - dictionary
         - scale
-        - total_clone_count
-        -
         Methods:
         - cell_count(gridpoint)
         - total_cell_count()

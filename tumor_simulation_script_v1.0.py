@@ -321,7 +321,6 @@ while t < t_final:
                 t = t_old + dt
         t = t_old
     grid.update_gridpoints()
-    #    (iii) Introduce new subclone when the simulation is at least 30% finished
     # (e) Synchronize t across all cells
     t = t_old + dt
     # (f) Save grid as jpeg

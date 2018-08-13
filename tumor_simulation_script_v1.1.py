@@ -12,8 +12,10 @@ DX = 1.  # Grid spacing
 D = .05  # Diffusion constant
 tau_D = 1 / (2 * DIM) * DX ** 2 / D  # Diffusion time constant
 
-RATE_B = {'A': 0.1, 'B': 0.1, 'C': 0.2}
-# TO DO: for multiple cell types, RATE_B will be a dictionary indicating birth rates of each cell
+CELL_TYPES_LIST = ('A', 'B', 'C')
+CELL_COLORS = {'A': 'm', 'B': 'g', 'C': 'y'}
+
+RATE_B = {'A': 0.1, 'B': 0.15, 'C': 0.2}
 RATE_D = 0.05  # Death rate
 CARRYING_CAPACITY = 20  # Number of sustainable cells at each gridpoint
 
@@ -22,11 +24,8 @@ k1_p = (1 + 0.33) / np.log(2)
 k2 = 2
 k2_p = 3
 
-CELL_TYPES_LIST = ('A', 'B', 'C')
-CELL_COLORS = {'A': 'm', 'B': 'g', 'C': 'y'}
-
-t_final = 120.
-MUT_TIME = 0.3 * t_final
+MAX_CELL_COUNT = 1000
+CELL_COUNT_THRESHOLD = 200
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -42,39 +41,41 @@ class Cell:
     """
 
     def __init__(self, coords=np.zeros(DIM, dtype=np.float_), cell_type='A'):
-        # Coords can be a tuple or an numpy array
-        # Tested Th 6/28 8:45pm
+        """Coords can be a tuple or an numpy array
+        Tested Th 6/28 8:45pm"""
         if len(coords) == DIM:
             self.coords = np.array(coords, dtype=np.float_)
         else:
-            raise ValueError
+            raise ValueError('$Dimensions mismatch')
         if cell_type in CELL_TYPES_LIST:
             self.cell_type = cell_type
         else:
-            raise ValueError('Cell type is invalid')
+            raise ValueError('$Cell type is invalid')
 
     def move(self, new_coords):
-        # Sets cell coordinates to a new numpy array
-        # Tested Th 6/28 8:49pm
+        """Sets cell coordinates to a new numpy array
+        Tested Th 6/28 8:49pm"""
         self.coords = np.array(new_coords, dtype=np.float_)
 
     def brownian_diffuse(self, dt):
-        # Diffuses cell using Smoluchowski diffusion
-        # Tested Th 6/28 9:13pm
+        """Diffuses cell using Smoluchowski diffusion
+        Tested Th 6/28 9:13pm"""
         new_coords = self.coords + np.sqrt(2 * D * dt) * rand.normal(0, 1, len(self.coords))
         self.move(new_coords)
 
     def equals(self, cell):
-        # Tested Th 6/28 10:43pm
+        """Tests whether two cells have the same coordinates and cell_type
+        Tested Th 6/28 10:43pm"""
         return all(self.coords == cell.coords) and self.cell_type == cell.cell_type
 
     def copy(self):
-        # Tested Th 7/5 9:55pm
+        """Returns another cell object with identical properties.
+        Tested Th 7/5 9:55pm"""
         return Cell(self.coords, self.cell_type)
 
     def to_string(self):
-        # For debugging
-        # Tested Th 6/28 8:45pm
+        """For debugging
+        Tested Th 6/28 8:45pm"""
         s = ''
         for i in range(len(self.coords)):
             s = s + ' ' + str(self.coords[i])
@@ -86,9 +87,10 @@ class Grid:
         Instance variables:
         - dictionary
         - scale
+        - total_cell_count
+        - cell_types_count
         Methods:
         - cell_count(gridpoint)
-        - total_cell_count()
         - add_cell(coords, cell_type)
         - remove_cell(coords, cell_type)
         - update_gridpoints()
@@ -105,51 +107,52 @@ class Grid:
     """
 
     def __init__(self, scale=1 / DX):
-        # Grid is a dictionary with tuples representing discrete lattice points
-        #    and values representing sets of cells nearest to that point
-        # Scale is the number of gridpoints per unit
-        # Tested Thu 6/28 9:16pm
+        """Grid is a dictionary with tuples representing discrete lattice points
+            and values representing sets of cells nearest to that point
+        Scale is the number of gridpoints per unit
+        Tested Thu 6/28 9:16pm"""
         self.dictionary = {}
         self.scale = scale
+        self.total_cell_count = 0
+        self.cell_types_count = {}
+        for cell_type in CELL_TYPES_LIST:
+            self.cell_types_count[cell_type] = 0
 
     def cell_count(self, gridpoint, cell_type=None):
-        # Returns the number of cells at a given gridpoint
-        # Tested Mon 7/2 12:42pm
-        count = 0
-        if cell_type == None:
-            for cell in self.dictionary[gridpoint]:
-                count += 1
-        else:
+        """Returns the number of cells at a given gridpoint
+        If cell_type is not specified, then the total number of cells
+            at that gridpoint is returned.
+        Tested Sun 8/12 11:28pm"""
+        if gridpoint not in self.dictionary:
+            return 0
+        elif cell_type == None:
+            return len(self.dictionary[gridpoint])
+        else: # Return number of cells of the specified type
+            count = 0
             for cell in self.dictionary[gridpoint]:
                 if cell.cell_type == cell_type:
                     count += 1
-        return count
-
-    def total_cell_count(self, cell_type=None):
-        # Returns the number of cells of a specified type at a given gridpoint
-        # Tested Mon 7/2 12:43pm
-        count = 0
-        for gridpoint in self.dictionary:
-            count += self.cell_count(gridpoint, cell_type)
-        return count
+            return count
 
     def add_cell(self, coords=np.zeros(DIM), cell_type='A'):
-        # Adds cell as a value to key corresponding to discrete gridpoint
-        #    If no gridpoint is in dictionary, create a list containing that cell
-        #    Otherwise, add it to the existing value list.
-        # Tested Thu 6/28 9:54pm
-        # Edited Fri 7/6 3:31pm
+        """Adds cell as a value to key corresponding to discrete gridpoint
+           If no gridpoint is in dictionary, create a list containing that cell
+           Otherwise, add it to the existing value list.
+        Tested Sun 8/12 11:25pm"""
+        if len(coords) != DIM:
+            raise ValueError('$Dimension mismatch')
         gridpoint = tuple([round(i * self.scale) / self.scale for i in coords])
         if gridpoint not in self.dictionary:
             self.dictionary[gridpoint] = [Cell(coords, cell_type)]
         else:
             self.dictionary[gridpoint].append(Cell(coords, cell_type))
+        self.total_cell_count += 1
+        self.cell_types_count[cell_type] += 1
 
     def remove_cell(self, coords, cell_type):
-        # Removes a cell from the grid.
-        # Does not remove empty gridpoints.
-        # Tested Thu 6/28 11:11am
-        # Edited Fri 7/9 5:38pm
+        """Removes a cell from the grid.
+        Does not remove empty gridpoints.
+        Tested 8/12 11:25pm"""
         gridpoint = tuple([round(i * self.scale) / self.scale for i in coords])
         if gridpoint not in self.dictionary:
             raise KeyError('No such cell to remove.')
@@ -157,10 +160,13 @@ class Grid:
             for cell in self.dictionary[gridpoint]:
                 if all(np.equal(cell.coords, coords)) and cell.cell_type == cell_type:
                     self.dictionary[gridpoint].remove(cell)
+                    self.total_cell_count -= 1
+                    self.cell_types_count[cell_type] -= 1
                     break
 
     def update_gridpoints(self):
-        # Remove any gridpoints which do not contain any cells.
+        """Remove any gridpoints which do not contain any cells.
+        Tested Sun 8/12 11:25pm"""
         null_gridpoints = []
         for gridpoint in self.dictionary:
             if len(self.dictionary[gridpoint]) == 0:
@@ -169,7 +175,9 @@ class Grid:
             del self.dictionary[gridpoint]
 
     def copy(self):
-        # Tested Thu 7/5 9:55pm
+        """Returns an identical copy of the grid.
+        This method is slow and should be avoided if possible.
+        Tested Thu 7/5 9:55pm"""
         new_grid = Grid()
         for gridpoint in self.dictionary:
             for cell in self.dictionary[gridpoint]:
@@ -177,8 +185,9 @@ class Grid:
         return new_grid
 
     def choose_random_cell(self, gridpoint, cell_type=None):
-        # Returns coordinates of a random cell at a gridpoint with the specified cell type.
-        # If no cell type is specified, then it selects an arbitrary random cell from the gridpoint.
+        """Returns coordinates of a random cell at a gridpoint with the specified cell type.
+        If no cell type is specified, then it selects an arbitrary random cell from the gridpoint.
+        Tested Sun 8/12 11:25pm"""
         if cell_type == None:
             random_cell = rand.choice(tuple(self.dictionary[gridpoint]))
             return random_cell.coords
@@ -192,18 +201,23 @@ class Grid:
 
     # Propensity functions:
     def birth_propensity(self, gridpoint, cell_type):
-        # Edited Fri 7/6 6:51pm
+        """Returns the birth propensity of the specified
+        cell type at the specified gridpoint.
+        Tested Sun 8/12 11:25pm"""
         return self.cell_count(gridpoint, cell_type) * RATE_B[cell_type] * (
                     1 - self.cell_count(gridpoint) / CARRYING_CAPACITY)
 
     def death_propensity(self, gridpoint, cell_type):
-        # Edited Fri 7/6 6:53pm
+        """Returns the death propensity of the specified
+        cell type at the specified gridpoint.
+        Tested Sun 8/12 11:25pm"""
         return self.cell_count(gridpoint, cell_type) * RATE_D
 
     def propensities(self, gridpoint):
-        # Produces a list of propensities evaluated at the gridpoint: [birth(A), death(A), birth(B), death(B), ...]
-        #    propensities_list[2*i] is the birth propensity of cell type i
-        #    propensities_list[2*i + 1] is the death propensity of cell type i
+        """Produces a list of propensities evaluated at the gridpoint: [birth(A), death(A), birth(B), death(B), ...]
+           propensities_list[2*i] is the birth propensity of cell type i
+           propensities_list[2*i + 1] is the death propensity of cell type i
+           Tested Sun 8/12 11:30pm"""
         propensities_list = []
         for cell_type in CELL_TYPES_LIST:
             propensities_list.append(self.birth_propensity(gridpoint, cell_type))
@@ -212,25 +226,27 @@ class Grid:
 
     def net_propensity(self, gridpoint):
         # return sum(f(cell_count) for f in [birth_propensity, death_propensity])
-        # Edited Wed 7/11 3:08pm
+        # Tested Sun 8/12 11:30pm
         return sum(self.propensities(gridpoint))
 
-    # Macroscopic time constant
     def T_R(self, gridpoint):
-        # Tested Mon 7/2 6:30pm
-        # Edited Sat 7/7 3:22pm
+        """Returns the macroscopic time constant for a compartment.
+        Tested Sun 8/12 11:25pm"""
         try:
             return 1. / (self.net_propensity(gridpoint))
         except ZeroDivisionError:
             return float('Inf')
 
     def T_R_min(self):
-        # Tested Mon 7/2 6:30pm
+        """Returns T_R^min, as described in Choi's thesis.
+        Tested Mon 7/2 6:30pm"""
         return min([self.T_R(gridpoint) for gridpoint in self.dictionary])
 
-    def plot(self, filename, file_type='.png',
+    def plot_and_save(self, filename, file_type='.png',
              output_dir=SAVE_DIR,
              x_min=-30, x_max=30, y_min=-30, y_max=30):
+        """Plots and saves the xy cross section of the tumor.
+        Tested Sun 8/12 11:32pm"""
         fig = plt.figure()
         ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
         ax.set_xlim(x_min, x_max)
@@ -245,8 +261,8 @@ class Grid:
         fig.savefig(output_dir + filename + file_type)
 
     def print(self):
-        # Print function for debugging.
-        # Tested Fri 6/29 6:13am
+        """Print function for debugging.
+        Tested Fri 6/29 6:13am"""
         for gridpoint in self.dictionary:
             print(gridpoint, ':')
             for cell in self.dictionary[gridpoint]:
@@ -262,9 +278,9 @@ iteration = 0
 images = []
 added_subclone = False
 
-while t < t_final:
+while grid.total_cell_count < MAX_CELL_COUNT:
     iteration += 1
-    print('Time: ', t, 'A:', grid.total_cell_count('A'), 'B:', grid.total_cell_count('B'))
+    print('Time: ', t, 'A:', grid.cell_types_count['A'], 'B:', grid.cell_types_count['B'])
     # (a) Determine system state type:
     try:
         F = float(grid.T_R_min() / tau_D)
@@ -305,7 +321,7 @@ while t < t_final:
                             # birth occurs
                             reacting_cell_type = CELL_TYPES_LIST[int(i / 2)]
                             random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
-                            if not added_subclone and t > MUT_TIME:
+                            if not added_subclone and grid.total_cell_count > CELL_COUNT_THRESHOLD:
                                 grid.add_cell(random_coords, 'B')
                                 added_subclone = True
                             else:
@@ -325,7 +341,7 @@ while t < t_final:
     t = t_old + dt
     # (f) Save grid as jpeg
     filename = 'output-graphic-' + str(iteration).zfill(3)
-    grid.plot(filename)
+    grid.plot_and_save(filename)
     filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 

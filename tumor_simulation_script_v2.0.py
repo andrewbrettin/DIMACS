@@ -27,7 +27,7 @@ k2_p = 3
 MUTATION_PROBS = {'AB': 0.05, 'AC': 0.01, 'BC': 0.10}
 
 MAX_CELL_COUNT = 1000
-CELL_COUNT_THRESHOLD = 1001
+SEEDING_COUNT_THRESHOLD = 1001
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -361,7 +361,7 @@ while grid.total_cell_count < MAX_CELL_COUNT:
                             r3 = rand.sample()
                             if r3 < total_reaction_probability(reacting_cell_type):
                                 reacting_cell_type = random_mutation(reacting_cell_type)
-                            if not added_subclone and grid.total_cell_count > CELL_COUNT_THRESHOLD:
+                            if not added_subclone and grid.total_cell_count > SEEDING_COUNT_THRESHOLD:
                                 grid.add_cell(random_coords, 'B')
                                 added_subclone = True
                             else:

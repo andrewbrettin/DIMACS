@@ -27,7 +27,7 @@ k2_p = 3
 MUTATION_PROBS = {'AB': 0.05, 'AC': 0.01, 'BC': 0.10}
 
 MAX_CELL_COUNT = 1000
-CELL_COUNT_THRESHOLD = 200
+CELL_COUNT_THRESHOLD = 1001
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -272,11 +272,38 @@ class Grid:
 
 # Global functions
 def possible_mutations(cell_type):
+    """Returns a subset of MUTATION_PROBS, only including
+    mutations of the specified cell type.
+    Tested Mon 8/13 5:51pm"""
     subdict = {}
+    for mut in MUTATION_PROBS:
+        if mut[0] == cell_type:
+            subdict[mut] = MUTATION_PROBS[mut]
+    return subdict
+
+def total_reaction_probability(cell_type):
+    """returns the total probability that a given cell type reacts.
+    Tested Mon 8/13 5:52pm"""
+    prob = 0
     for mutation in MUTATION_PROBS:
         if mutation[0] == cell_type:
-            subdict[mutation] = MUTATION_PROBS[mutation]
-    return subdict
+            prob += MUTATION_PROBS[mutation]
+    return prob
+
+def random_mutation(cell_type):
+    """Given that a mutation has occurred, randomly selects
+    the type of mutation that happens. Returns the type of mutant cell.
+    Tested Mon 8/13 5:55pm"""
+    norm = total_reaction_probability(cell_type)
+    mutations = possible_mutations(cell_type)
+    for mut in mutations:
+        mutations[mut] /= norm
+    r = rand.sample()
+    total = 0
+    for mut in mutations:
+        total += mutations[mut]
+        if r <= total:
+            return mut[1]
 
 # Operator-splitting algorithm implementation.
 # Initialize grid:
@@ -330,6 +357,10 @@ while grid.total_cell_count < MAX_CELL_COUNT:
                             # birth occurs
                             reacting_cell_type = CELL_TYPES_LIST[int(i / 2)]
                             random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
+                            # Check that a mutation occurs.
+                            r3 = rand.sample()
+                            if r3 < total_reaction_probability(reacting_cell_type):
+                                reacting_cell_type = random_mutation(reacting_cell_type)
                             if not added_subclone and grid.total_cell_count > CELL_COUNT_THRESHOLD:
                                 grid.add_cell(random_coords, 'B')
                                 added_subclone = True

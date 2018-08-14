@@ -24,8 +24,10 @@ k1_p = (1 + 0.33) / np.log(2)
 k2 = 2
 k2_p = 3
 
+MUTATION_PROBS = {'AB': 0.05, 'AC': 0.01, 'BC': 0.10}
+
 MAX_CELL_COUNT = 1000
-CELL_COUNT_THRESHOLD = 200
+SEEDING_COUNT_THRESHOLD = 200
 
 class Cell:
     """A cell object contains the information about a tumor cell.
@@ -268,6 +270,13 @@ class Grid:
             for cell in self.dictionary[gridpoint]:
                 print(cell.to_string())
 
+# Global functions
+def possible_mutations(cell_type):
+    subdict = {}
+    for mutation in MUTATION_PROBS:
+        if mutation[0] == cell_type:
+            subdict[mutation] = MUTATION_PROBS[mutation]
+    return subdict
 
 # Operator-splitting algorithm implementation.
 # Initialize grid:
@@ -321,7 +330,7 @@ while grid.total_cell_count < MAX_CELL_COUNT:
                             # birth occurs
                             reacting_cell_type = CELL_TYPES_LIST[int(i / 2)]
                             random_coords = grid.choose_random_cell(gridpoint, reacting_cell_type)
-                            if not added_subclone and grid.total_cell_count > CELL_COUNT_THRESHOLD:
+                            if not added_subclone and grid.total_cell_count > SEEDING_COUNT_THRESHOLD:
                                 grid.add_cell(random_coords, 'B')
                                 added_subclone = True
                             else:

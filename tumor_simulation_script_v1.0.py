@@ -47,11 +47,11 @@ class Cell:
         if len(coords) == DIM:
             self.coords = np.array(coords, dtype=np.float_)
         else:
-            raise ValueError
+            raise ValueError('$Dimensions mismatch')
         if cell_type in CELL_TYPES_LIST:
             self.cell_type = cell_type
         else:
-            raise ValueError('Cell type is invalid')
+            raise ValueError('$Cell type is invalid')
 
     def move(self, new_coords):
         # Sets cell coordinates to a new numpy array
@@ -86,10 +86,12 @@ class Grid:
         Instance variables:
         - dictionary
         - scale
+        - total_cell_count
+        - cell_types_count
         Methods:
-        - cell_count(gridpoint)
-        - total_cell_count()
+        - cell_count(gridpoint[,cell_type])
         - add_cell(coords, cell_type)
+        - total_cell_count([cell_type])
         - remove_cell(coords, cell_type)
         - update_gridpoints()
         - copy()
@@ -139,6 +141,8 @@ class Grid:
         #    Otherwise, add it to the existing value list.
         # Tested Thu 6/28 9:54pm
         # Edited Fri 7/6 3:31pm
+        if len(coords) != DIM:
+            raise ValueError('$Dimension mismatch')
         gridpoint = tuple([round(i * self.scale) / self.scale for i in coords])
         if gridpoint not in self.dictionary:
             self.dictionary[gridpoint] = [Cell(coords, cell_type)]
@@ -152,7 +156,7 @@ class Grid:
         # Edited Fri 7/9 5:38pm
         gridpoint = tuple([round(i * self.scale) / self.scale for i in coords])
         if gridpoint not in self.dictionary:
-            raise KeyError('No such cell to remove.')
+            raise KeyError('$No such cell to remove.')
         else:
             for cell in self.dictionary[gridpoint]:
                 if all(np.equal(cell.coords, coords)) and cell.cell_type == cell_type:
@@ -228,7 +232,7 @@ class Grid:
         # Tested Mon 7/2 6:30pm
         return min([self.T_R(gridpoint) for gridpoint in self.dictionary])
 
-    def plot(self, filename, file_type='.png',
+    def plot_and_save(self, filename, file_type='.png',
              output_dir=SAVE_DIR,
              x_min=-30, x_max=30, y_min=-30, y_max=30):
         fig = plt.figure()
@@ -325,7 +329,7 @@ while t < t_final:
     t = t_old + dt
     # (f) Save grid as jpeg
     filename = 'output-graphic-' + str(iteration).zfill(3)
-    grid.plot(filename)
+    grid.plot_and_save(filename)
     filepath = os.path.join(SAVE_DIR, filename + '.png')
     images.append(imageio.imread(filepath))
 
